@@ -8,15 +8,18 @@ Algoritmo basic_calc
 	subs<-0
 	mult<-0
 	div<-0
+	//inputs
+	num1<-10
+	num2<-5
 	//processes
 	add<-num1+num2
 	subs<-num1-num2
 	mult<-num1*num2
 	div<-num1/num2
 	//outputs
-	escribir "the addition is", add
-	Escribir  " the substration is", subs
-	escribir "the multiplication is", mult
-	escribir "the division is", div
+	escribir "the addition is: ", add
+	Escribir  " the substration is: ", subs
+	escribir "the multiplication is: ", mult
+	escribir "the division is: ", div
 	
 FinAlgoritmo
