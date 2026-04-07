@@ -1,0 +1,204 @@
+0<!-- etiqueta que especifica que estamos escribiendo en html  -->
+<html lang="es"> <!-- idimoa html-->
+<head>  <!-- cabecera-->
+    <meta charset="UTF-8"> <!--caracteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>MI primera pagina web </title>
+</head>
+<body>
+    <h1> Hola, Buenos dias </h1>
+    <h1> Etiqueta h1 </h1>
+<nav aria-label="Navegacion Principal">
+    <!-- listas no ordenadas -->
+    <ul class="nav">
+        <li> <a href="#texto"> </a> Texto</li>
+         <li><a href="#listas"></a> Listas</li>
+          <li> <a href="#multimedia"></a>Multimedia</li>
+           <li> <a href="#tablas"></a>Tablas</li>
+            <li><a href="#formularios"></a>Formularios </li>
+             <li> <a href="semantica"></a>Semantica</li>
+    </ul>
+</nav>
+<main id="contenido" class="container">
+ <section class="card" id="texto">
+      <h2>1) Texto y estructura</h2>
+
+      <article>
+        <h3>Encabezados</h3>
+        <p>Esto es un párrafo con <strong>strong</strong>, <em>em</em>, <mark>mark</mark>, <u>u</u> y <code>code</code>.</p>
+
+        <p>
+          Un enlace: <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN Web Docs</a>.
+          Un <abbr title="HyperText Markup Language">HTML</abbr> bien usado es oro.
+        </p>
+
+        <blockquote cite="https://developer.mozilla.org/">
+          “La web se construye mejor cuando el HTML tiene significado.”
+        </blockquote>
+
+        <p>
+          Texto pequeño: <small>esto es una nota al pie mental.</small>
+        </p>
+
+        <p>
+          Superíndice y subíndice: H<sub>2</sub>O y 2<sup>10</sup>.
+        </p>
+
+        <hr />
+
+        <h3>Detalles expandibles</h3>
+        <details>
+          <summary>Abre para ver un tip</summary>
+          <p>Usa etiquetas semánticas: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>… tu yo del futuro te lo agradece.</p>
+        </details>
+
+        <h3>Preformateado</h3>
+        <pre><code>function holaMundo() {
+  console.log("Hola, GitHub!");
+}</code> </pre>
+      </article>
+    </section>
+    <section class="card"> 
+      <h2>2) Listas  </h2>
+      <div class="grid">  
+        <div>
+            <h3>Listas no ordenadas </h3>
+            <ul>
+                <li> pan</li>
+                <li> Cafe</li>
+                <li>Cena</li>
+
+            </ul>
+        </div>   
+        <div>
+            <h3>Listas Ordenadas</h3>
+            <ol>
+                <li>clonar repo </li>
+                <li>Editar </li>
+                <li>commit</li>
+                <li>push</li>
+            
+            </ol>
+
+        </div>
+        <div>
+            <h3> Listas de definiciones </h3>
+            <dl>
+                <dt>html</dt>
+                <dt>Estructuras</dt>
+                <dt>Estilo</dt>
+                <dt>js</dt>
+            </dl>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="card" id="multimedia">
+        <h2>Multimedia</h2>
+        <figure>
+            <img src="https://www.elcarrocolombiano.com/wp-content/uploads/2021/12/20212812-PORTADA-Audi-RS-6-Avant.jpg" alt="Imagen de ejemplo">
+        </figure>
+        <p>
+            <button type="button" class="btn">Boton
+            <a href="#formularios" class="btn ghost">Ir a Formularios</a>     
+            </button>
+        </p>
+    </section>
+    <section class="card" id="tables">
+        <h2>4) Tablas</h2>
+        <table>
+        <caption> Tabla de ejamplos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Comandos</th>
+                <th scope="col">¿Que hace?</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>git status</td>
+                <td>Muestra cambios pendientes</td>
+            </tr>
+            <tr>
+                <td>git add</td>
+                <td>Agrega cambios al "staging</td>
+            </tr>
+            <tr>
+                <td>git push</td>
+                <td>Sube al repo remoto</td>
+            </tr>
+            
+        </tbody>
+        </table>
+
+    </section>
+    <section class="card" id="Formularios">
+        <h2>5) Formularios</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <fieldset>Datos Basicos</fieldset>
+                <label>
+                    Nombre
+                    <input type="text" name="Nombre" placeholder="Tu nombre" required>
+                </label>
+                <label>
+                    email
+                    <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                </label>
+                <label>
+                    Pasaword
+                    <input type="password" minlength="6">
+                </label>
+                <label>
+                    Fecha
+                    <input type="date" name="Fecha">
+                </label>
+                <label>
+                    Color
+                    <input type="color" name="color">
+                </label>
+                <label>
+                    Rango
+                    <input type="range" name="Rango" min="0" max="100">
+                </label>
+                <label>
+                    archivos
+                    <input type="file" name="archivo">
+                </label>
+                <label>
+                    Seleccion
+                    <select name="opcion" >
+                        <option value="">Elige una</option>
+                        <option>HTML</option>
+                        <option >css</option>
+                        <option >Git</option>
+                    </select>
+                </label>
+                <label>
+                    comentarios
+                    <textarea name="comentarios" rows="4" placeholder="Escribe algo"></textarea>
+                </label>
+                <div class="inline">
+                    <label><input type="radio" name="nivel" value="basico">Basico</label>
+                    <label><input type="radio" name="nivel" value="pro">Pro</label>
+                </div>
+                <div class="inline">
+                    <label><input type="checkbox" name="ok">Acepto terminos</label>
+
+                </div>
+                <div class="actions">
+                    <button class="btn" type="submit">Enviar</button>
+                    <button class="btn ghost" type="reset">Limpiar</button>
+                </div>
+                
+            </fieldset>
+        </form>
+    </section>
+
+
+
+</main>
+</body>
+</html>
