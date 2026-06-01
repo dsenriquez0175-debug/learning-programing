@@ -9,50 +9,61 @@ def draw_dices():
 
 def play():
     print(":::NUMERICAL RACE:::")
-    N_jugadores = int(input("¿how many players? (2-4): "))
-    print("1. principiante(20) 2. Intermedio(30) 3. avanzado(50) 4. Experto(100)")
+    while true:
+        N_jugadores = int(imput("¿How many players? (2-4): "))
+        if 2 <= N_jugadores <=4:
+            break
+        print("Error: there must be between 2 and 4 players")
+    print("\n1. principiante (20)")
+    print("2. Intermedio (30)")
+    print("3. Avanzado (50)")
+    print("4. Experto (100)")
     option = int(input("choose level (1-4): "))
 
-# define goal according to the option
+# Validate level
 
-if potion == 1. meta = 20
+if option == 1. meta = 20
 elif option == 2. meta = 30
 elif option == 3. meta = 50
-else: meta = 100
+elif: meta = 100
+else:
+    print("Invalid level")
 
 # control variables
 posiciones = [0] * N_jugadores
 consecutivos = [0] * N_jugadores
 hay_ganador = false
 
-# 3. Ciclo principal del juego
-while not hay_ganador:
-     for i in range(n_jugadores):
-        print(f"\nTurno Jugador {i+1}")
-        input("Presiona Enter para lanzar...")
-            
-    d1, d2, suma = lanzar_dados()
-    print(f"Dados: {d1} y {d2} (Suma: {suma})")
+print(f"\nThe is the position {meta}")
 
-# Regla de los 3 pares consecutivos
-if d1 == d2:
-    consecutivos[i] += 1
-    print(f"¡Llevas {consecutivos[i]} pares!")
-else:
+    # 3. main cycle 
+    while not hay_ganador:
+        for i in range(N_jugadores):
+            print(f"\nTurno Jugador {i+1}")
+            input("press enter to launch:::")
+            
+            d1, d2, suma = lanzar_dados()
+            print(f"Dados: {d1} y {d2} (Suma: {suma})")
+
+            # rule 3 consecutive pairs
+            if d1 == d2:
+                consecutivos[i] += 1
+                print(f"¡you carry {consecutivos[i]} pairs!")
+            else:
                 consecutivos[i] = 0
 
             if consecutivos[i] == 3:
-                print(f"¡EL JUGADOR {i+1} GANÓ POR TRIPLE PAR!")
+                print(f"¡THE PLAYER{i+1} WON BY TRYPLE PAIR!")
                 hay_ganador = True
                 break
 
-            # Movimiento normal
+            # Normal movement
             posiciones[i] += suma
-            print(f"Vas en la posición: {posiciones[i]}")
+            print(f"you are in the position: {posiciones[i]}")
 
             if posiciones[i] >= meta:
-                print(f"¡EL JUGADOR {i+1} GANÓ POR LLEGAR A LA META!")
+                print(f"¡THE PLAYER{i+1} WON BY TRYPLE PAIR!")
                 hay_ganador = True
                 break
 
-jugar() 
+play() 

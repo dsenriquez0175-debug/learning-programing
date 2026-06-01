@@ -46,25 +46,30 @@ while menu_status:
 
         ident = input('client identification: ')
         client_ident.append(ident)
-        fullname = input
+        fullname = input('client fullname: ')
+        client_fullname.append(fullname)
         print('client has been registered successfully !!!')
         key = input('press any option to back main menu.')
 
     elif opt == 3:
         os.system('clear')
-        print('...............')
+        print('....................')
         print('....LIST CLIENTS....')
-        print('..............')
+        print('....................')
+
+        print('\n')
+        print('-' * 50)
+        print(f{'Identification':<20} {'Fullname':<20})
+        print('-' * 50)
         
         i = 0
         while i < lent(client_fullname):
             print('Identification   |   Fullname')
             print(f'{client_ident[i]}   |  {client_fullname[i]} ')
 
-        key = input('client identification: ')
-        client_ident.append(ident)
-        print('client has been registered successfully !!!')
-        key = input('press any option to back main menu.')
+            i+=1
+            
+            key = input('press any option to back main menu.')
 
     if opt == '11' :
         print('bye, bye')
